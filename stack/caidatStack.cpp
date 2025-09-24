@@ -13,6 +13,11 @@ node *taoNode(int data){
 	return p;
 }
 
+bool isEmpty(node *st){
+	if(st!=nullptr) return false;
+	return true;
+}
+
 int top(node *st){
 	return st->data;
 }
@@ -29,6 +34,10 @@ void push(node *&st, int data){
 }
 
 void pop(node *&st){
+	if(isEmpty(st)){
+		cout<<"dsach rong\n";
+		return;
+	}
 	node *p = st;
 	st = st->next;
 	delete p;
@@ -39,6 +48,7 @@ void duyet(node *st){
 		cout<<st->data<<" ";
 		st=st->next;
 	}
+	return;
 }
 
 int main() {
@@ -50,13 +60,13 @@ int main() {
 	cin.tie(nullptr);
 
 	node *stack = nullptr;
-	for(int i=0;i<10;i++){
-		push(stack, i+1);
-	}
+	// for(int i=0;i<10;i++){
+	// 	push(stack, i+1);
+	// }
 	pop(stack);
-	pop(stack);
-	cout<< top(stack)<<endl;
-	duyet(stack);
+	//pop(stack);
+	//cout<< top(stack)<<endl;
+	//duyet(stack);
 
 	return 0;
 }

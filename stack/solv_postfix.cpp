@@ -59,7 +59,7 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	string postfix = "573-/215+*+";
+	string postfix = "537-/215+*-";
 	cout<<tinhPostfix(postfix)<<endl;
 
 	return 0;
