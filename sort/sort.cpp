@@ -54,7 +54,14 @@ void quicksort(vector<int> &v, int l, int r){
 }
 
 void insertionSort(vector<int> &v){
-
+	int n= v.size();
+	for(int i =1; i<n;i++){
+		int j= i;
+		while(j>0 && v[j-1]>v[j]){
+			swap(v[j-1], v[j]);
+			j--;
+		}
+	}
 }
 
 int main() {
@@ -69,7 +76,8 @@ int main() {
 	int n = v.size();
 	//bb_sort(v);
 	//sl_sort(v);
-	quicksort(v, 0, n-1);
+	//quicksort(v, 0, n-1);
+	insertionSort(v);
 	for(int x:v){
 		cout<<x<<" ";
 	}
