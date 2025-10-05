@@ -53,12 +53,12 @@ void quicksort(vector<int> &v, int l, int r){
 	quicksort(v, pi+1 ,r); // sort ben phai
 }
 
-void insertionSort(vector<int> &v){
-	int n= v.size();
-	for(int i =1; i<n;i++){
+void insertionSort(vector<int> &a){
+	int n= a.size(); // độ dài của mảng
+	for(int i =1; i<n;i++){ // lặp mảng từ 1->n
 		int j= i;
-		while(j>0 && v[j-1]>v[j]){
-			swap(v[j-1], v[j]);
+		while(j>0 && a[j-1]>a[j]){
+			swap(a[j-1], a[j]);
 			j--;
 		}
 	}
