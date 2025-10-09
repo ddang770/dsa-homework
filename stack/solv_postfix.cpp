@@ -17,9 +17,11 @@ float tinhPostfix(string s){
 	for(int i=0;i<len;i++){
 		char c = s[i];
 
-		if(!isdigit(c)){ // neu la toan tu
-			a = Pop(st);
-			b = Pop(st);
+		if(!isdigit(c)){ // neu ko phai toan hang
+			// a = Pop(st);
+			// b = Pop(st);
+			a=st.top(); st.pop();
+			b=st.top(); st.pop();
 			switch(c)
 			{
 			case '+':

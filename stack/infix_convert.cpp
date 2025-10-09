@@ -54,7 +54,9 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	string infix="(5+3)*2-8/4";
+	string infix="(86/2+14)-(2+5*8)";
+	//(86/2 + 14)-(2+5 * 8)
+	//string infix="(5+3)*2-8/4";
 	infixToPostfix(infix);
 	cout << "infix: " << infix << endl;
     cout << "postfix: " << infixToPostfix(infix)<<endl;

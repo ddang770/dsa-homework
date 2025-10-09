@@ -8,12 +8,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void bb_sort(vector<int> &v){
+void bb_sort(vector<int> &v){ //cach 1
 	int n =v.size();
 	for(int i=0;i<n-1;i++){
 		for(int j=0;j<n-1-i;j++){
 			if(v[j]>v[j+1]) //tang dan
 				swap(v[j], v[j+1]);
+		}
+	}
+}
+
+void bubblesort(vector<int> &v){ //cach 2
+	int n =v.size();
+	for(int i=1;i<n;i++){
+		for(int j=0;j<n-1;j++){
+			if(a[j]>a[j+1]) //tang dan
+				swap(a[j], a[j+1]);
 		}
 	}
 }
@@ -60,6 +70,16 @@ void insertionSort(vector<int> &a){
 		while(j>0 && a[j-1]>a[j]){
 			swap(a[j-1], a[j]);
 			j--;
+		}
+	}
+}
+
+void exchangeSort(vector<int> &a){
+	for(int i=0;i<n-1;i++){
+		for(int j=i+1;j<n;j++){
+			if(a[i]>a[j]){
+				swap(a[i], a[j]);
+			}
 		}
 	}
 }
