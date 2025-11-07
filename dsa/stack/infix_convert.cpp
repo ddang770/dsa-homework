@@ -16,6 +16,7 @@ string infixToPostfix(string infix){
 	string postfix="";
 	//duyet qua tat ca ki tu trong infix
 	for(int i=0; i<infix.length(); i++){
+	//for(char c: infix){
 		char c =infix[i];
 
 		if(isdigit(c))
@@ -54,7 +55,7 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	string infix="(86/2+14)-(2+5*8)";
+	string infix="(1+2-3)*5/(6-7)+4";
 	//(86/2 + 14)-(2+5 * 8)
 	//string infix="(5+3)*2-8/4";
 	infixToPostfix(infix);

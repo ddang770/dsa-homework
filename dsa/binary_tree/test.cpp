@@ -75,24 +75,33 @@ int main() {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
 
-	node *root = new node(1);
+	node *root = new node(30);
 
-	root->left = new node(2);
-	root->right = new node(3);
-	root->left->left = new node(4);
-	root->left->right = new node(5);
-	root->right->left = new node(6);
-	root->right->right = new node(7);
+	root->left = new node(15);
+	root->right = new node(40);
 
-    if (themNodeSauX(root, 7, -1)) {
-        cout << "Da them node " << newValue << " vao sau node " << x << "." << endl;
-    } else {
-        cout << "Khong the them node moi (node " << x << " khong ton tai hoac da co con phai)." << endl;
-    }
+	root->left->left = new node(10);
+	root->left->right = new node(20);
+	root->right->left = new node(35);
+
+	root->left->left->right = new node(12);
+	root->left->left->right->left = new node(11);
+
+	root->left->right->left = new node(18);
+	root->right->left->left = new node(33);
+	root->right->left->right = new node(37);
+	root->right->left->left->right = new node(34);
+	root->right->left->right->left = new node(36);
+
+    // if (themNodeSauX(root, 7, -1)) {
+    //     cout << "Da them node " << newValue << " vao sau node " << x << "." << endl;
+    // } else {
+    //     cout << "Khong the them node moi (node " << x << " khong ton tai hoac da co con phai)." << endl;
+    // }
 
 
     
-    duyetgiua(root);
+    duyetsau(root);
 
 	return 0;
 }
