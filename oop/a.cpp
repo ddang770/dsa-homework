@@ -17,12 +17,12 @@ private:
 	static int count;
 public:
 	void hienthi();
-	SanPham(){
-		ma = "SP001";
-		ten = "Ban phim co";
-		gia = 300000;
-		++count;
-	}
+	// SanPham(){
+	// 	ma = "SP001";
+	// 	ten = "Ban phim co";
+	// 	gia = 300000;
+	// 	++count;
+	// }
 	SanPham(string ma, string ten, double gia){
 		this->ma = ma; this->ten=ten; this->gia=gia;
 		++count;
@@ -65,13 +65,13 @@ void inThongtin(SanPham s){
 int SanPham::count = 0;
 
 int main() {
-	// SanPham s; // SanPham: class, s: object
+	 // s; // SanPham: class, s: object
 	// cin >> s;
 	SanPham t("SP002", "Quan jean", 10000);
 	inThongtin(t);
 	// cout << t;
-	// SanPham b("SP003", "Man hinh", 20000);
-	// cout<<t+b<<endl;
+	 SanPham b("SP003", "Man hinh", 20000);
+	 cout<<t+b<<endl;
 	// cout<< s;
 	// cout<<s.getCount()<<endl;
 	// cout<<SanPham::getCount()<<endl;
