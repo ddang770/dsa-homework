@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 class SP{
@@ -56,5 +56,5 @@ int main(){
 	
 	SP a,b;
 	cin>>a>>b;
-	cout<<(a/b);
+	cout<<(a+b);
 }
